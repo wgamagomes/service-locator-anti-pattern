@@ -1,6 +1,7 @@
 ﻿namespace ServiceLocatorAntiPattern.Interfaces
 {
-    interface IEmployeeValidator
+    public interface IEmployeeValidator
     {
+        bool Validate(Employee employee);
     }
 }
