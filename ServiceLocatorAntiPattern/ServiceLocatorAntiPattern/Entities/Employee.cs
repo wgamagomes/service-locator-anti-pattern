@@ -1,4 +1,4 @@
-﻿namespace ServiceLocatorAntiPattern
+﻿namespace ServiceLocatorAntiPattern.Entities
 {
     public class Employee
     {
