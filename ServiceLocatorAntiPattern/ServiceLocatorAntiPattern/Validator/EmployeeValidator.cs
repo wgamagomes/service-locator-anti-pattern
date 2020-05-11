@@ -1,13 +1,19 @@
-﻿using ServiceLocatorAntiPattern.Interfaces;
+﻿using ServiceLocatorAntiPattern.Entities;
+using ServiceLocatorAntiPattern.Interfaces;
+using System.Threading.Tasks;
 
 namespace ServiceLocatorAntiPattern.Validator
 {
     public class EmployeeValidator : IEmployeeValidator
     {
-        public bool Validate(Employee employee)
+        public Task<bool> ValidateAsync(Employee employee)
         {
-            return !string.IsNullOrEmpty(employee.FirstName)
-                && !string.IsNullOrEmpty(employee.LastName);
+           return Task.Run(() =>
+            {
+                return !string.IsNullOrEmpty(employee.FirstName)
+               && !string.IsNullOrEmpty(employee.LastName);
+
+            });           
         }
     }
 }
