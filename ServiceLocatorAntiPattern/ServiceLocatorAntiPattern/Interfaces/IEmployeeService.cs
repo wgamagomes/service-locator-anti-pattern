@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace ServiceLocatorAntiPattern.Interfaces
 {
-    public interface IEmployeeValidator
+    public interface IEmployeeService
     {
-        Task<bool> ValidateAsync(Employee employee);
+        Task HandleAsync(Employee employee);
     }
 }
