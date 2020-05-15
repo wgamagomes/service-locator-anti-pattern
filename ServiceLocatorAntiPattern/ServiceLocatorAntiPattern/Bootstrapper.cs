@@ -14,8 +14,6 @@ namespace ServiceLocatorAntiPattern
             ServiceLocator.Register<IEmployeeRepository, EmployeeRepository>(() => new EmployeeRepository());
             ServiceLocator.Register<IUnitOfWork, UnitOfWork>(() => new UnitOfWork());
             ServiceLocator.Register<IMailMessageSender, MailMessageSender>(() => new MailMessageSender());
-
-
         }
     }
 }
