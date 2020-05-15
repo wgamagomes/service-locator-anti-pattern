@@ -1,9 +1,5 @@
 ﻿using ServiceLocatorAntiPattern.Entities;
-using ServiceLocatorAntiPattern.Interfaces;
-using ServiceLocatorAntiPattern.Repositories;
 using ServiceLocatorAntiPattern.Services;
-using ServiceLocatorAntiPattern.Validator;
-using System;
 using System.Threading.Tasks;
 
 namespace ServiceLocatorAntiPattern
@@ -16,7 +12,18 @@ namespace ServiceLocatorAntiPattern
 
             var employeeService = new EmployeeService();
 
-            await employeeService.HandleAsync(new Employee { FirstName = "Ton", LastName = "Gomes" });
+            var employee = new Employee { FirstName = "Wellington", LastName = "Gomes" };
+
+            await employeeService.HandleAsync(employee); 
         }
     }
 }
+
+
+
+
+
+
+
+
+
