@@ -1,5 +1,6 @@
 ﻿using ServiceLocatorAntiPattern.Interfaces;
 using ServiceLocatorAntiPattern.Locator;
+using ServiceLocatorAntiPattern.Mail;
 using ServiceLocatorAntiPattern.Repositories;
 using ServiceLocatorAntiPattern.Validator;
 
@@ -12,6 +13,8 @@ namespace ServiceLocatorAntiPattern
             ServiceLocator.Register<IEmployeeValidator, EmployeeValidator>(() => new EmployeeValidator());
             ServiceLocator.Register<IEmployeeRepository, EmployeeRepository>(() => new EmployeeRepository());
             ServiceLocator.Register<IUnitOfWork, UnitOfWork>(() => new UnitOfWork());
+            ServiceLocator.Register<IMailMessageSender, MailMessageSender>(() => new MailMessageSender());
+
 
         }
     }
